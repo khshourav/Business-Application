@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Custom sustainability theme */
+.bg-sustainable {
+    background-color: #1B5E20; /* Deep green */
+}
+
+.text-sustainable {
+    color: #1B5E20;
+}
+
+.hover\:bg-sustainable:hover {
+    background-color: #2E7D32; /* Lighter green */
+}
+
+/* Hero section overlay */
+.hero-overlay {
+    background: linear-gradient(
+        to right,
+        rgba(27, 94, 32, 0.9),  /* Deep green */
+        rgba(13, 71, 161, 0.7)  /* Trust blue */
+    );
+}
+
+.text-shadow {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* For better visibility on light backgrounds when scrolled */
+  .dark\:text-shadow {
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+  }
+
+  /* Add to your main CSS file */
+.btn-edit {
+    @apply px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors;
+}
+
+.btn-view {
+    @apply px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition-colors;
+}
+
+/* Disable text selection and focus outline for non-interactive elements */
+body *:not(a, button, input, textarea, select, [tabindex]) {
+    user-select: none; 
+    outline: none; /* Remove focus outline */
+  }
+  
+  /* Ensure interactive elements remain accessible */
+  a, button, input, textarea, select, [tabindex] {
+    /* outline: auto;  */
+    /* Add focus outline for accessibility */
+  }
